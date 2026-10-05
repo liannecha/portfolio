@@ -115,6 +115,42 @@ export default function Home() {
                 flow and the practitioner flow.
               </p>
             </article>
+
+            <article className="space-y-4">
+              <div className="mx-auto aspect-[9/19] w-full max-w-[19.5rem] overflow-hidden rounded-[2rem] border-[6px] border-[var(--text-primary)] bg-black shadow-lg">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  controls
+                  preload="metadata"
+                  className="h-full w-full object-contain"
+                >
+                  <source src="/videos/cityfix-demo.mp4" type="video/mp4" />
+                  Your browser does not support this video.
+                </video>
+              </div>
+              <a
+                href="https://github.com/StanfordCS194/spr26-Team-7/wiki"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <div className="flex items-baseline justify-between gap-4">
+                  <h3 className="type-h2 text-[2.25rem]">CityFix</h3>
+                  <p className="type-small shrink-0">View wiki ↗</p>
+                </div>
+              </a>
+              <p className="type-body max-w-2xl">
+                CityFix is a mobile app that lets users report civic issues
+                (e.g. potholes, broken streetlights, or illegal dumping) by
+                simply taking a photo. The app automatically identifies the
+                problem, captures the location, and routes the report to the
+                right government agency. No forms, no figuring out which
+                department to contact.
+              </p>
+            </article>
           </div>
         </div>
       </section>
