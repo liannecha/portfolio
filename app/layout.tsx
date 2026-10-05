@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Lianne Cha — SWE and Product",
-  description: "Lianne's portfolio. Product-focused software engineer building AI systems and user-centered UI/UX.",
+  description: "Lianne's portfolio. Product-focused software engineer building AI systems.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
