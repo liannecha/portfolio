@@ -55,7 +55,7 @@ export default function Home() {
         <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[minmax(18rem,0.7fr)_minmax(0,1.3fr)] lg:gap-16">
           <div className="self-start lg:sticky lg:top-24 lg:translate-x-12">
             <h2 id="projects-heading" className="type-h1">
-              Projects
+              Software Projects
             </h2>
           </div>
 
@@ -73,12 +73,14 @@ export default function Home() {
                     alt="TCMNet home page"
                     fill
                     sizes="(min-width: 1024px) 60vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
                   />
                 </div>
                 <div className="mt-4 flex items-baseline justify-between gap-4">
                   <h3 className="type-h2 text-[2.25rem]">TCMNet</h3>
-                  <p className="type-small shrink-0">Visit site ↗</p>
+                  <p className="type-small shrink-0 hover:underline hover:underline-offset-4">
+                    Visit site ↗
+                  </p>
                 </div>
                 <p className="type-body mt-4 max-w-2xl">
                   End to end web app featuring a neural network from scratch that takes in symptoms
@@ -94,18 +96,32 @@ export default function Home() {
                 onClick={() => allerKeyPresentationDialog.current?.showModal()}
                 className="group block w-full text-left"
               >
-                <div className="relative aspect-[16/9] overflow-hidden border border-[var(--surface-warm)] bg-[var(--surface-warm)]/35">
-                  <Image
-                    src="/images/allerkey-home-page.png"
-                    alt="AllerKey sign-in screen"
-                    fill
-                    sizes="(min-width: 1024px) 60vw, 100vw"
-                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  />
+                <div className="flex items-stretch gap-4 sm:gap-6">
+                  <div className="relative aspect-[16/9] min-w-0 flex-1 overflow-hidden border border-[var(--surface-warm)] bg-[var(--surface-warm)]/35">
+                    <Image
+                      src="/images/allerkey-grading-dashboard.png"
+                      alt="AllerKey grading dashboard"
+                      fill
+                      sizes="(min-width: 1024px) 45vw, 70vw"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.08]"
+                    />
+                  </div>
+                  <div className="relative aspect-[9/19] w-[27%] max-w-[11rem] shrink-0 overflow-hidden rounded-[2rem] border-[6px] border-[var(--text-primary)] bg-white shadow-lg">
+                    <Image
+                      src="/images/allerkey-sign-in.png"
+                      alt="AllerKey sign-in screen"
+                      fill
+                      unoptimized
+                      sizes="(min-width: 1024px) 12vw, 27vw"
+                      className="object-[47%_50%] object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </div>
                 </div>
                 <div className="mt-4 flex items-baseline justify-between gap-4">
                   <h3 className="type-h2 text-[2.25rem]">AllerKey</h3>
-                  <p className="type-small shrink-0">View presentation ↗</p>
+                  <p className="type-small shrink-0 hover:underline hover:underline-offset-4">
+                    View presentation ↗
+                  </p>
                 </div>
               </button>
               <p className="type-body max-w-2xl">
@@ -139,7 +155,9 @@ export default function Home() {
               >
                 <div className="flex items-baseline justify-between gap-4">
                   <h3 className="type-h2 text-[2.25rem]">CityFix</h3>
-                  <p className="type-small shrink-0">View wiki ↗</p>
+                  <p className="type-small shrink-0 hover:underline hover:underline-offset-4">
+                    View wiki ↗
+                  </p>
                 </div>
               </a>
               <p className="type-body max-w-2xl">
@@ -156,8 +174,42 @@ export default function Home() {
       </section>
 
       {/* Section 3: About */}
-      <section id="about">
-
+      <section
+        id="about"
+        aria-labelledby="about-heading"
+        className="mt-24 min-h-screen px-6 py-24 sm:px-10"
+      >
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-center">
+          <h2 id="about-heading">
+            <Image
+              src="/SVG/about_header.svg"
+              alt="About me"
+              width={225}
+              height={137}
+              className="h-auto w-full max-w-[40rem]"
+            />
+          </h2>
+          <p className="type-body mt-12 w-full max-w-3xl text-left">
+            I&apos;m Lianne, a Stanford CS grad and software engineer. I love
+            building end-to-end and being able to turn ideas into usable
+            software by combining engineering with product thinking. My current
+            obsessions are UI design and everything Adobe, hot yoga, piano, and
+            wearable health tech. On my bookshelf right now is Pachinko by Min Jin Lee, 
+            and I&apos;m also currently training for my first marathon!
+          </p>
+          <br></br>
+          <p className="type-small mt-12 w-full max-w-3xl text-left">
+            Contact: liannec@alumni.stanford.edu
+            <br></br>
+            <a
+              href="/cha_lianne_resume.pdf"
+              download
+              className="hover:underline hover:underline-offset-4"
+            >
+              Download my resume
+            </a>
+          </p>
+        </div>
       </section>
 
       {/* Section 4: Skills */}
@@ -167,11 +219,6 @@ export default function Home() {
 
       {/* Section 5: Experience */}
       <section id="experience">
-
-      </section>
-      
-      {/* Section 6: Contact */}
-      <section id="contact">
 
       </section>
 
