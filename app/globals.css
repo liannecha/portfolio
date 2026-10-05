@@ -1,26 +1,99 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Color system */
+  --background: #f8f2e8;
+  --surface-warm: #d0c2aa;
+  --surface-cool: #d9dad8;
+  --text-primary: #3f3931;
+  --text-secondary: #74706f;
+  --accent-red: #793b38;
+  --accent-blue: #485465;
+
+  /* Font families loaded from the Adobe Fonts kit */
+  --font-display: "orpheuspro", Georgia, serif;
+  --font-display-condensed: "orpheus-pro-condensed", Georgia, serif;
+  --font-body: "franklin-gothic-std", Arial, sans-serif;
+  --font-accent: "felt-tip-woman", cursive;
 }
 
 @theme inline {
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-surface-warm: var(--surface-warm);
+  --color-surface-cool: var(--surface-cool);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent-red: var(--accent-red);
+  --color-accent-blue: var(--accent-blue);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-display);
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+}
+
+/* Typography style guide */
+.type-hero {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 6.667rem; /* 80 pt */
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+.type-h1 {
+  color: var(--text-primary);
+  font-family: var(--font-display-condensed);
+  font-size: 4.667rem; /* 56 pt */
+  font-weight: 700;
+  line-height: 1;
+}
+
+.type-h2 {
+  color: var(--text-primary);
+  font-family: var(--font-display-condensed);
+  font-size: 3.333rem; /* 40 pt */
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.type-body {
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1.5rem; /* 18 pt */
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.type-small {
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 1.167rem; /* 14 pt */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.type-accent {
+  color: var(--accent-red);
+  font-family: var(--font-accent);
+  font-size: 1.167rem; /* 14 pt */
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Decorative grid: repeats across the full height of the scrollable page. */
+.grid-overlay {
+  --grid-size: 20rem;
+
+  background-image: url("data:image/svg+xml,%3Csvg width='320' height='320' viewBox='0 0 320 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 160C80 167 240 153 320 160M160 0C167 80 153 240 160 320' fill='none' stroke='%23D0C2AA' stroke-width='2' stroke-linecap='round' stroke-dasharray='1 10'/%3E%3C/svg%3E");
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+.grid-overlay ~ section {
+  position: relative;
+  z-index: 1;
 }
